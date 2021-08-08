@@ -15,7 +15,7 @@ ChartManager.prototype = {
     drawChart: function(key, value) {
         const canvas = document.querySelector('#chart-manager-' + key);
 
-        myChart = new Chart(canvas, value);
+        new Chart(canvas, value);
     }
 }
 module.exports = ChartManager;
