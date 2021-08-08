@@ -1,0 +1,480 @@
+/*
+ *  File Name : /src/entry/scss/layout/_section.scss
+ *  Description : section
+ */
+
+.visual-section {
+    .point-color {
+        color: $G-color-point-yellow !important;
+    }
+    .visual-main {
+        height: 638px;
+        background: {
+            image: url('../../img/visual_bg.jpg');
+            repeat: no-repeat;
+            color: #22cae4;
+            position: 160% bottom;
+        }
+        
+        .text-area {
+            position: absolute;
+            left: 0;
+            top: 110px;  
+            z-index: 1;
+
+            .title {
+                @include fontStyle($size: 52px);
+                @include textStyle($color: $G-color-white);
+
+                text-shadow: 3px 3px 0px rgba(8, 171, 196, 0.8);
+                span {
+                    font-size: 57px;
+                    letter-spacing: 1px;
+                }
+            }
+            .period {
+                @include fontStyle($size: 18px);
+                @include textStyle($color: $G-color-white, $letter-spacing: 0);
+
+                margin: 32px 0;
+                text-shadow: 1px 1px 0px rgba(4, 139, 160, 0.5);
+                
+                em {
+                    float:left;
+                    margin-right: 12px;
+                    font-weight: bold;
+                    color: #51e8ff;
+                }
+            }
+            .content {
+                @include fontStyle($size: 16px);
+                @include textStyle($color: $G-color-white, $line-height: 1.6);
+
+                text-shadow: 1px 1px 0px rgba(4, 139, 160, 0.4);
+
+                &:last-child {
+                    margin-top: 12px;
+                }
+            }
+        }
+        .image-area {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+    }
+    .visual-bottom {
+        padding: 35px 0;
+        background-color: $G-color-point-skyblue;
+
+        .content {
+            @include fontStyle($size: 30px);
+            @include textStyle($color: $G-color-white, $line-height: 1.2);
+            
+            text-align: center;
+            
+            .point-color {
+                font-weight: bold;
+            }
+        }
+    }
+}
+.container-section {
+    .section {
+        .inner {
+            padding: 50px 0;
+            border-bottom: 1px solid #ededed;
+        }
+        &:last-child {
+            .inner {
+                border-bottom: 0;
+            }
+        }
+    }
+    h2 {
+        @include fontStyle($size: 22px);
+        @include textStyle($line-height: 1.5);
+
+        position: relative;
+        margin-bottom: 25px;
+        text-align: center;
+
+        .point-color-skyblue {
+            font-weight: bold;
+            color: $G-color-point-skyblue !important;
+        }
+        .point-color-purple {
+            font-weight: bold;
+            color: $G-color-point-purple !important;
+        }
+        &.section-title {
+            &::before {
+                content: '';
+                display: block;
+                width: 70px;
+                height: 70px;
+                margin: 0 auto 30px;
+                background-color: $G-color-white;
+                border: 2px solid $G-color-point-skyblue;
+                border-radius: 50%;
+                box-sizing: border-box;
+            }
+        }
+    }
+}
+.section-tag {
+    .tag-area {
+        display: -webkit-flex; 
+        display: flex;
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-justify-content: center;
+        justify-content: center;
+        width: 600px;
+        margin: 0 auto;
+
+        li {
+            max-width: 100%;
+            height: 48px;
+            margin: 0 4px 13px;
+            padding: 0 35px;
+            line-height: 44px;
+            background-color: $G-color-white;
+            border-width: 2px;
+            border-style: solid;
+            border-color: #d4dadb;
+            border-radius: 30px;
+            box-sizing: border-box;
+
+            a {
+                display: -webkit-flex; 
+                display: flex;
+                -webkit-align-items: center;
+                align-items: center;
+                max-width: 100%;
+            }
+            .tag {
+                @include fontStyle($weight: bold, $size: 17px);
+                @include ellipsis(1);
+
+                &::before {
+                    content: '#';
+                    display: inline-block;
+                }
+            }
+            .count {
+                @include fontStyle($size: 15px);
+                
+                max-width: 45px;
+                margin-left: 6px;
+                color: #9e9e9e;
+                white-space: nowrap;
+            }
+            &:hover, &.on {
+                border-color: $G-color-point-skyblue;
+            }
+        }
+    }
+    .bottom-area {
+        margin-top: 18px;
+        text-align: center; 
+
+        .text {
+            @include fontStyle($size: 17px);
+            @include textStyle();   
+
+            margin-top: 30px;
+        }
+    }
+}
+.section-valley {
+    .valley-area {
+        display: -webkit-flex; 
+        display: flex;
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-justify-content: center;
+        justify-content: center;
+
+        li {
+            width: 212px;
+            height: 202px;
+            margin: 0 14px;
+            background-image: url('../../img/sp_valley_rank.png');
+
+            a {
+                display: -webkit-flex; 
+                display: flex;
+                -webkit-justify-content: center;
+                justify-content: center;
+                -webkit-align-items: flex-end;
+                align-items: flex-end;
+                height: 100%;
+                padding-bottom: 40px;
+                box-sizing: border-box;
+            }
+            .info {
+                @include fontStyle($weight: bold, $size: 17px);
+                @include textStyle($line-height: 1.5);
+
+                width: 75%;
+                text-align: center;
+            }
+            .info-title {
+                @include ellipsis(1);
+
+                max-width: 100%;
+            }
+            .info-count {
+                @include ellipsis(1);
+
+                font-weight: normal;
+                color: #9e9e9e;
+            }
+            &:nth-child(1) {
+                background-position: 0 0;
+            }
+            &:nth-child(2) {
+                background-position: -223px 0;
+            }
+            &:nth-child(3) {
+                background-position: -446px 0;
+            }
+            &:hover, &.on {
+                background-position-y: -212px;
+            }
+        }
+    }
+    .bottom-area {
+        @include fontStyle($weight: bold, $size: 17px);
+        @include textStyle();
+
+        margin-top: 40px;
+        text-align: center;
+    }
+}
+.section-search-ranking {
+    .ranking-box {
+        width: 700px;
+        margin: 0 auto;
+        border-top: 1px solid #8a8a8a;
+        
+        .column {
+            float: left;
+            color: #888;
+
+            &-1 {
+                width: 85px;
+                text-align: center;
+            }
+            &-2 {
+                padding: 0 8px;
+                width: calc(100% - 181px);
+            }
+            &-3 {
+                width: 80px;
+                text-align: center;
+            }
+        }
+    }
+    .title-area {
+        @include fontStyle($size: 14px);
+
+        overflow: hidden;
+        line-height: 44px;
+    }
+    .list-area {
+        li {
+            @include fontStyle($size: 16px);
+            
+            overflow: hidden;
+            box-sizing: border-box;
+            line-height: 44px;
+
+            a {
+                display: block;
+            }
+            .keyword {
+                @include ellipsis(1);
+                
+                color: #000;
+            }
+            &.on {
+                border: 2px solid $G-color-point-skyblue;
+
+                .column {
+                    font-weight: bold;
+                    color: $G-color-point-skyblue;
+                }
+            }
+        }
+    }
+}
+.section-post {
+    .post-area {
+        overflow: hidden;
+
+        li {
+            float: left;
+            width: 172px;
+            margin-right: 10px;
+
+            &:nth-child(5n) {
+                margin-right: 0;
+            }
+            a {
+                display: block;
+                &:hover {
+                    .post-info .title {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+        .post-thumbnail {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            height: 129px;
+            background-color: #ddd;
+            
+            img {
+                @extend %image-position-center;
+
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+        .post-info {
+            margin-top: 15px;
+            text-align: center;
+
+            .number {
+                @include fontStyle($size: 16px);
+                @include textStyle($color: #9e9e9e, $letter-spacing: 0);
+                @include ellipsis(1);
+            }
+            .title {
+                @include fontStyle($size: 16px);
+                @include textStyle($color: #333, $line-height: 1.3);
+                @include ellipsis(2);
+
+                margin-top: 5px;
+            }
+        }
+    }
+}
+.section-comment-ranker {
+    .ranker-area {
+        li {
+            height: 90px;
+            background-color: $G-color-white;
+            border-width: 1px;
+            border-style: solid;
+            border-color: #e5e5e5;
+            box-sizing: border-box;
+            
+            a {
+                display: -webkit-flex;
+                display: flex;
+                -webkit-justify-content: space-between;
+                justify-content: space-between;
+                -webkit-align-items: center;
+                align-items: center;
+                height: 100%;
+            }
+            &.on {
+                border-width: 2px;
+                border-color: $G-color-point-skyblue;
+
+                .rank {
+                    color: $G-color-point-skyblue !important;
+                }
+            }
+        }
+        .rank {
+            @include fontStyle($style: italic, $size: 45px);
+            @include textStyle($color: #a1a1a1);
+
+            width: 96px;
+            text-align: center;
+        }
+        .thumbnail {
+            overflow: hidden;
+            position: relative;
+            width: 54px;
+            height: 54px;
+            border-radius: 50%;
+            
+            img {
+                @extend %image-position-center;
+
+                width: 100%;
+            }
+        }
+        .nickname {
+            @include fontStyle($size: 18px);
+            @include textStyle();
+            @include ellipsis(1);
+            
+            width: -webkit-calc(100% - 290px);
+            width: calc(100% - 290px);
+            padding-left: 16px;
+        }
+        .count {
+            @include fontStyle($size: 16px);
+            @include textStyle($color: #919191);
+
+            width: 124px;
+
+            &::before {
+                margin-right: 10px;
+            }
+        }
+    }
+}
+.finish-section {
+    .finish-main {
+        background-color: $G-color-white;
+
+        .image-area {
+            text-align: center;
+        }
+    }
+    .finish-bottom {
+        padding: 40px 0;
+        background-color: $G-color-point-skyblue;
+
+        .title {
+            @include fontStyle($size: 22px);
+            @include textStyle($color: $G-color-white, $line-height: 1.5);
+
+            margin-bottom: 35px;
+            text-align: center;
+        }
+        .icon-area {
+            display: -webkit-flex; 
+            display: flex;
+            -webkit-justify-content: center;
+            justify-content: center;
+
+            .icon {
+                display: -webkit-flex; 
+                display: flex;
+                -webkit-justify-content: center;
+                justify-content: center;
+                -webkit-align-items: center;
+                align-items: center;
+                float: left;
+                width: 90px;
+                height: 90px;
+                margin: 0 14px;
+                background-color: $G-color-white;
+                border-radius: 50%;
+                -moz-box-shadow: 3px 3px 0 0 #06b3cd;
+                -webkit-box-shadow: 3px 3px 0 0 #06b3cd;
+                box-shadow: 3px 3px 0 0 #06b3cd;
+            }
+        }
+    }
+}

@@ -1,0 +1,45 @@
+/*
+ *  File Name : /src/entry/scss/layout/_header.scss
+ *  Description : header
+ */
+
+header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    height: 60px;
+    background-color: transparent;
+
+    .inner {
+        border-bottom: 1px solid #65daec;
+    }
+    h1 {
+        float: left;
+        line-height: 60px;
+    }
+    .icon-area {
+        display: -webkit-flex; 
+        display: flex;
+        -webkit-align-items: center;
+        align-items: center;
+        overflow: hidden;
+        float: right;
+        height: 60px;
+        margin-right: -14px;
+
+        .icon {
+            float:left;
+            padding: 14px;
+        }
+    }
+    &.position-fixed {
+        position: fixed;
+        background-color: rgba(245,245,245, 0.7);
+
+        .inner {
+            border-bottom: 0;
+        }
+    }
+}

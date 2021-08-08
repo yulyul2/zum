@@ -1,0 +1,21 @@
+@charset 'utf-8';
+
+//common
+@import './abstracts/variable';
+@import './abstracts/placeholder';
+@import './abstracts/mixin';
+@import './base/reset';
+@import './base/common';
+@import './components/icon';
+@import './components/button';
+@import './components/quick';
+@import './components/chart';
+
+//header
+@import './layout/header';
+
+//section
+@import './layout/section';
+
+//footer
+@import './layout/footer';

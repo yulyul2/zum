@@ -1,0 +1,206 @@
+/*
+ *  File Name : /src/entry/scss/components/_icon.scss
+ *  Description : icon
+ */
+
+.icon {
+    &-logo {
+        @include iconBefore(
+            $width: 77px, 
+            $height: 27px, 
+            $url-position-x: 0, 
+            $url-position-y: 0
+        );
+    }
+    &-twitter {
+        @include iconBefore(
+            $width: 20px, 
+            $height: 17px, 
+            $url-position-x: -87px, 
+            $url-position-y: 0
+        );
+    }
+    &-twitter-type2 {
+        @include iconBefore(
+            $width: 36px, 
+            $height: 31px, 
+            $url-position-x: 0, 
+            $url-position-y: -82px
+        );
+    }
+    &-facebook {
+        @include iconBefore(
+            $width: 11px, 
+            $height: 20px, 
+            $url-position-x: -117px, 
+            $url-position-y: 0
+        );
+    }
+    &-facebook-type2 {
+        @include iconBefore(
+            $width: 19px, 
+            $height: 37px, 
+            $url-position-x: -45px, 
+            $url-position-y: -82px
+        );
+    }
+    &-write {
+        @include iconBefore(
+            $width: 19px, 
+            $height: 19px, 
+            $url-position-x: -138px, 
+            $url-position-y: 0
+        );
+    }
+    &-write-type2 {
+        @include iconBefore(
+            $width: 37px, 
+            $height: 37px, 
+            $url-position-x: -75px, 
+            $url-position-y: -82px
+        );
+    }
+}
+.has-icon {
+    &-mobile {
+        @include iconAfter(
+            $width: 29px, 
+            $height: 48px, 
+            $parent-height: 222px, 
+            $position: absolute, 
+            $position-y: 64px !important,
+            $url-position-x: -122px, 
+            $url-position-y: -82px
+        );
+    }
+    &-pc {
+        @include iconAfter(
+            $width: 46px, 
+            $height: 39px, 
+            $parent-height: 222px, 
+            $position: absolute, 
+            $position-y: 68px !important,
+            $url-position-x: -161px, 
+            $url-position-y: -82px
+        );
+    }
+    &-comment {
+        @include iconBefore(
+            $width: 27px, 
+            $height: 24px, 
+            $url-position-x: -217px, 
+            $url-position-y: -82px
+        );    
+    }
+    &-write {
+        @include iconAfter(
+            $width: 35px, 
+            $height: 35px, 
+            $parent-height: 60px, 
+            $position: absolute, 
+            $url-position-x: -254px, 
+            $url-position-y: -82px
+        );    
+    }
+    &-arrow-top {
+        @include iconAfter(
+            $width: 16px, 
+            $height: 10px, 
+            $parent-height: 60px, 
+            $position: absolute, 
+            $position-y: 12px !important,
+            $url-position-x: -299px, 
+            $url-position-y: -82px
+        );    
+    }
+    &-section-1 {
+        @include iconAfter(
+            $width: 35px, 
+            $height: 35px,
+            $parent-height: 70px, 
+            $position: absolute, 
+            $url-position-x: 0, 
+            $url-position-y: -37px
+        );
+    }
+    &-section-2 {
+        @include iconAfter(
+            $width: 32px, 
+            $height: 28px, 
+            $parent-height: 70px, 
+            $position: absolute, 
+            $url-position-x: -45px, 
+            $url-position-y: -37px
+        );
+    }
+    &-section-3 {
+        @include iconAfter(
+            $width: 34px, 
+            $height: 35px, 
+            $parent-height: 70px, 
+            $position: absolute, 
+            $url-position-x: -87px, 
+            $url-position-y: -37px
+        );
+    }
+    &-section-4 {
+        @include iconAfter(
+            $width: 32px, 
+            $height: 32px, 
+            $parent-height: 70px, 
+            $position: absolute, 
+            $url-position-x: -131px, 
+            $url-position-y: -37px
+        );
+    }
+    &-section-5 {
+        @include iconAfter(
+            $width: 32px, 
+            $height: 32px, 
+            $parent-height: 70px, 
+            $position: absolute, 
+            $url-position-x: -173px, 
+            $url-position-y: -37px
+        );
+    }
+    &-section-6 {
+        @include iconAfter(
+            $width: 32px, 
+            $height: 32px, 
+            $parent-height: 70px, 
+            $position: absolute, 
+            $url-position-x: -215px, 
+            $url-position-y: -37px
+        );
+    }
+    &-section-7 {
+        @include iconAfter(
+            $width: 32px, 
+            $height: 32px, 
+            $parent-height: 70px, 
+            $position: absolute, 
+            $url-position-x: -257px, 
+            $url-position-y: -37px
+        );
+    }
+    &-section-8 {
+        @include iconAfter(
+            $width: 26px, 
+            $height: 32px, 
+            $parent-height: 70px, 
+            $position: absolute, 
+            $url-position-x: -299px, 
+            $url-position-y: -37px
+        );
+    }
+    &-section-9 {
+        @include iconAfter(
+            $width: 32px, 
+            $height: 30px, 
+            $parent-height: 70px, 
+            $position: absolute, 
+            $url-position-x: -335px, 
+            $url-position-y: -37px
+        );
+    }
+}

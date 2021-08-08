@@ -1,0 +1,59 @@
+/*
+ *  File Name : /src/entry/scss/components/_chart.scss
+ *  Description : chart
+ */
+
+.chart-manager {
+    width: 100%;
+
+    &-type2 {
+        margin-bottom: 50px;
+    }
+}
+
+.chart-doughnut {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 10px;
+    
+    .chart {
+        position: relative;
+        width: 230px;
+        height: 230px;
+        border-radius: 50%;
+        transition: 0.3s;        
+    }
+    .circle-box {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-align-items: flex-end;
+        align-items: flex-end;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 222px;
+        height: 222px;
+        padding-bottom: 68px;
+        background: #fff;
+        border-radius: 50%;
+        box-sizing: border-box;
+        transform: translate(-50%, -50%);
+
+        .value-number {
+            @include fontStyle($size: 30px);
+            @include textStyle($letter-spacing: 0);
+
+            &::after {
+                @include fontStyle($size: 22px);
+
+                content: '%';
+                display: inline-block;
+            }
+        }
+    }
+}

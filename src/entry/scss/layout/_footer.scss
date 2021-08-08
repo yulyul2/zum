@@ -1,0 +1,16 @@
+/*
+ *  File Name : /src/entry/scss/layout/_footer.scss
+ *  Description : footer
+ */
+
+footer {
+    padding: 40px 0;
+    background-color: $G-color-white;
+
+    .text {
+        @include fontStyle();
+        @include textStyle($color: #afafaf, $letter-spacing: 0);
+
+        text-align: center;
+    }
+}

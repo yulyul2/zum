@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZUM - egloos 2017 내이글루 결산</title>
+    <link rel="stylesheet" type="text/css" href="./dist/css/egloos.min.css">
+	<script type="text/javascript" src="./libs/js/chart/3.5.0/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script> 
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <div class="inner clearfix">
+                <h1>
+                    <a href="javascript:void(0)" class="icon icon-logo"><span class="blind">egloos</span></a>
+                </h1>
+                <div class="icon-area">
+                    <a href="javascript:void(0)" class="icon icon-twitter"><span class="blind">트위터</span></a>
+                    <a href="javascript:void(0)" class="icon icon-facebook"><span class="blind">페이스북</span></a>
+                    <button type="button" class="icon icon-write"><span class="blind">글작성</span></button>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section class="visual-section">
+                <div class="visual-main">
+                    <div class="inner">
+                        <div class="text-area">
+                            <h2 class="title"><span class="point-color">2017</span> 내이글루 결산</h2>
+                            <p class="period"><em>결산기간</em> 2017. 01. 01 ~ 2017. 12. 31</p>
+                            <p class="content">
+                                이글루스와 함께 한 1년, 어떠셨어요?<br>
+                                기쁜날도 슬픈날도 <span class="point-color">유리님</span>과 함께한 시간,<br> 
+                                이글루스에게는 모두 눈부신 날이였습니다.
+                            </p>
+                            <p class="content">
+                                이글루스를 사랑해주신 <span class="point-color">한 해 히스토리</span>를 확인해보세요.
+                            </p>
+                        </div>
+                        <div class="image-area">
+                            <img src="./img/visual_img.png" alt="비주얼 이미지">
+                        </div>
+                    </div>
+                </div>
+                <div class="visual-bottom">
+                    <div class="inner">
+                        <p class="content">
+                            2017년 <span class="point-color">유리님</span>은 이글루스에서 <span class="point-color">8,256</span>번째로 글을 많이 쓰셨군요!
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <div class="container-section">
+                <section class="section section-posting-chart">
+                    <div class="inner">
+                        <h2 class="section-title has-icon-section-1">
+                            포스팅을 가장 많이 한 달은 <span class="point-color-skyblue">7</span>월 이네요!<br>
+                            2016년에 비해 <span class="point-color-purple">+608</span> 개 작성하였어요!<br>
+                            <span class="point-color-skyblue">2018</span>년에도 우리 자주 만나요!
+                        </h2>
+                        <canvas id="chart-manager-type1" class="chart-manager chart-manager-type1"></canvas>
+                    </div>
+                </section>
+                <section class="section section-egloos-chart">
+                    <div class="inner">
+                        <h2 class="section-title has-icon-section-2">
+                            내 이글루가 가장 핫했던 기간은<br> 
+                            <span class="point-color-purple">7월</span> 이이예요
+                        </h2>
+                        <canvas id="chart-manager-type2" class="chart-manager chart-manager-type2"></canvas>
+                        <h2 class="section-sub-title">
+                            이글루스는 주로 <span class="point-color-skyblue">pc</span>를 통해서<br>
+                            글을 많이 쓰시는군요!
+                        </h2>
+                        <div class="chart-doughnut">
+                            <div class="chart chart-mobile">
+                                <div class="circle-box has-icon-mobile">
+                                    <span class="value-number">25.23</span>
+                                    <span class="value-color blind">#6f8afd</span>
+                                </div>
+                            </div>
+                            <div class="chart chart-pc">
+                                <div class="circle-box has-icon-pc">
+                                    <span class="value-number bold">75.26</span>
+                                    <span class="value-color blind">#1ad8f5</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="section section-tagValley-chart">
+                    <div class="inner">
+                        <h2 class="section-title has-icon-section-3">
+                            태그에 가장 많이 발행한 달은 <span class="point-color-skyblue">9</span>월이고<br> 
+                            밸리에 가장 많이 발행한 달은 <span class="point-color-purple">7</span>월이예요
+                        </h2>
+                        <canvas id="chart-manager-type3" class="chart-manager chart-manager-type3"></canvas>
+                    </div>
+                </section>
+                <section class="section section-tag">
+                    <div class="inner">
+                        <h2 class="section-title has-icon-section-4">
+                            자주 등록한 <span class="point-color-skyblue">태그</span>는?
+                        </h2>
+                        <ul class="tag-area">
+                            <li class="on">
+                                <a href="javascript:void(0)">
+                                    <em class="tag">포켓몬고</em>
+                                    <span class="count">245회</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <em class="tag">아라리는그만나와도괜찮아</em>
+                                    <span class="count">165회</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <em class="tag">가나다라</em>
+                                    <span class="count">245회</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <em class="tag">엄엄지</em>
+                                    <span class="count">245회</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <em class="tag">이유진</em>
+                                    <span class="count">245회</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="bottom-area">
+                            <img src="./img/tag_penguin_img.png" alt="펭귄 이미지">
+                            <p class="text">태그를 <span class="bold">오조오억번</span> 등록하는 그날까지!</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="section section-valley">
+                    <div class="inner">
+                        <h2 class="section-title has-icon-section-5">
+                            자주 발행한 <span class="point-color-skyblue">밸리</span>는? 
+                        </h2>
+                        <ul class="valley-area">
+                            <li class="on">
+                                <a href="javascript:void(0)">
+                                    <span class="blind">1</span>
+                                    <div class="info">
+                                        <p class="info-title">패션&뷰티</p>
+                                        <p class="info-count">120회</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <span class="blind">2</span>
+                                    <div class="info">
+                                        <p class="info-title">애완반려동물</p>
+                                        <p class="info-count">95회</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <span class="blind">3</span>
+                                    <div class="info">
+                                        <p class="info-title">뉴스비평</p>
+                                        <p class="info-count">14회</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="bottom-area">
+                            <p class="text">2018년에는 다른 밸리에도 자주 찾아와주세요!</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="section section-search-ranking">
+                    <div class="inner">
+                        <h2 class="section-title has-icon-section-6">
+                            검색 엔진에서 가장 많이 유입 된<br> 
+                            <span class="point-color-skyblue">내 블로그 검색어 Top10</span>
+                        </h2>
+                        <div class="ranking-box">
+                            <div class="title-area">
+                                <span class="column column-1">순위</span>
+                                <span class="column column-2">검색어</span>
+                                <span class="column column-3">유입수</span>
+                            </div>
+                            <ul class="list-area">
+                                <li class="on">
+                                    <a href="javascript:void(0)">
+                                        <span class="column column-1">1</span>
+                                        <span class="column column-2 keyword">도깨비 감독판 DVD</span>
+                                        <span class="column column-3">10</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <span class="column column-1">2</span>
+                                        <span class="column column-2 keyword">태양의 후예 감독판</span>
+                                        <span class="column column-3">9</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <span class="column column-1">3</span>
+                                        <span class="column column-2 keyword">불어라 미풍아 몇부작</span>
+                                        <span class="column column-3">8</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <span class="column column-1">4</span>
+                                        <span class="column column-2 keyword">방탄소년단 봄날</span>
+                                        <span class="column column-3">7</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <span class="column column-1">5</span>
+                                        <span class="column column-2 keyword">기동전사 건담 철혈의 오펀스 43화</span>
+                                        <span class="column column-3">6</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <span class="column column-1">6</span>
+                                        <span class="column column-2 keyword">소주 1병 칼로리</span>
+                                        <span class="column column-3">5</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <span class="column column-1">7</span>
+                                        <span class="column column-2 keyword">포켓몬고 GPS 조작</span>
+                                        <span class="column column-3">4</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <span class="column column-1">8</span>
+                                        <span class="column column-2 keyword">이브이 이스터에그</span>
+                                        <span class="column column-3">3</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <span class="column column-1">9</span>
+                                        <span class="column column-2 keyword">올뉴카니발 하이리무진 시승기</span>
+                                        <span class="column column-3">2</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <span class="column column-1">10</span>
+                                        <span class="column column-2 keyword">스타벅스 슈크림라떼</span>
+                                        <span class="column column-3">1</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section class="section section-post section-post-popular">
+                    <div class="inner">
+                        <h2 class="section-title has-icon-section-7">
+                            가장 <span class="point-color-skyblue">인기</span> 많았던 포스트 TOP5
+                        </h2>
+                        <ul class="post-area">
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <div class="post-thumbnail">
+                                        <img src="./img/post/popular_img_01.jpg" alt="아주 만족 스러웠던 강릉 에어비엔비">
+                                    </div>
+                                    <div class="post-info">
+                                        <p class="number">3462회</p>
+                                        <p class="title">아주 만족스러웠던 강릉 에어비엔비</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <div class="post-thumbnail">
+                                        <img src="./img/post/popular_img_02.jpg" alt="봄, 벚꽃, 인생샷, 개인화보 촬영">
+                                    </div>
+                                    <div class="post-info">
+                                        <p class="number">120회</p>
+                                        <p class="title">봄, 벚꽃, 인생샷, 개인화보 촬영</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <div class="post-thumbnail">
+                                        <img src="./img/post/popular_img_03.jpg" alt="가로수길 라붐 가죽공방">
+                                    </div>
+                                    <div class="post-info">
+                                        <p class="number">120회</p>
+                                        <p class="title">가로수길 라붐 가죽공방</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <div class="post-thumbnail">
+                                        <img src="./img/post/popular_img_04.jpg" alt="아주 만족 스러웠던 강릉 에어비엔비">
+                                    </div>
+                                    <div class="post-info">
+                                        <p class="number">3462회</p>
+                                        <p class="title">아주 만족스러웠던 강릉 에어비엔비</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <div class="post-thumbnail">
+                                        <img src="./img/post/popular_img_05.jpg" alt="아주 만족 스러웠던 강릉 에어비엔비">
+                                    </div>
+                                    <div class="post-info">
+                                        <p class="number">120회</p>
+                                        <p class="title">아주 만족스러웠던 강릉 에어비엔비</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="section section-post section-post-hot">
+                    <div class="inner">
+                        <h2 class="section-title has-icon-section-8">
+                            가장 <span class="point-color-skyblue">HOT</span> 했던 포스트 TOP5
+                        </h2>
+                        <ul class="post-area">
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <div class="post-thumbnail">
+                                        <img src="./img/post/hot_img_01.jpg" alt="아주 만족 스러웠던 강릉 에어비엔비">
+                                    </div>
+                                    <div class="post-info">
+                                        <p class="number">3462회</p>
+                                        <p class="title">아주 만족스러웠던 강릉 에어비엔비</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <div class="post-thumbnail">
+                                        <img src="./img/post/hot_img_02.jpg" alt="봄, 벚꽃, 인생샷, 개인화보 촬영">
+                                    </div>
+                                    <div class="post-info">
+                                        <p class="number">120회</p>
+                                        <p class="title">봄, 벚꽃, 인생샷, 개인화보 촬영</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <div class="post-thumbnail">
+                                        <img src="./img/post/hot_img_03.jpg" alt="가로수길 라붐 가죽공방">
+                                    </div>
+                                    <div class="post-info">
+                                        <p class="number">120회</p>
+                                        <p class="title">가로수길 라붐 가죽공방</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <div class="post-thumbnail">
+                                        <img src="./img/post/hot_img_04.jpg" alt="아주 만족 스러웠던 강릉 에어비엔비">
+                                    </div>
+                                    <div class="post-info">
+                                        <p class="number">3462회</p>
+                                        <p class="title">아주 만족스러웠던 강릉 에어비엔비</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <div class="post-thumbnail">
+                                        <img src="./img/post/hot_img_05.jpg" alt="아주 만족 스러웠던 강릉 에어비엔비">
+                                    </div>
+                                    <div class="post-info">
+                                        <p class="number">120회</p>
+                                        <p class="title">아주 만족스러웠던 강릉 에어비엔비</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="section section-comment-ranker">
+                    <div class="inner">
+                        <h2 class="section-title has-icon-section-9">
+                            내 이글루 댓글 <span class="point-color-skyblue">상위랭커 TOP5</span>
+                        </h2>
+                        <ul class="ranker-area">
+                            <li class="on">
+                                <a href="javascript:void(0)">
+                                    <span class="rank">1</span>
+                                    <span class="thumbnail">
+                                        <img src="./img/profile/thumb_img_01.jpg" alt="프로필 이미지">
+                                    </span>
+                                    <span class="nickname">채다인</span>
+                                    <span class="count has-icon-comment">1620회</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <span class="rank">2</span>
+                                    <span class="thumbnail">
+                                        <img src="./img/profile/thumb_img_02.jpg" alt="프로필 이미지">
+                                    </span>
+                                    <span class="nickname">레이오트</span>
+                                    <span class="count has-icon-comment">1620회</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <span class="rank">3</span>
+                                    <span class="thumbnail">
+                                        <img src="./img/profile/thumb_img_03.jpg" alt="프로필 이미지">
+                                    </span>
+                                    <span class="nickname">지민이의 B급 도시락</span>
+                                    <span class="count has-icon-comment">1620회</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <span class="rank">4</span>
+                                    <span class="thumbnail">
+                                        <img src="./img/profile/thumb_img_04.jpg" alt="프로필 이미지">
+                                    </span>
+                                    <span class="nickname">두산 철웅이</span>
+                                    <span class="count has-icon-comment">1620회</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <span class="rank">5</span>
+                                    <span class="thumbnail">
+                                        <img src="./img/profile/thumb_img_05.jpg" alt="프로필 이미지">
+                                    </span>
+                                    <span class="nickname">oookay0128</span>
+                                    <span class="count has-icon-comment">1620회</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+            <section class="finish-section">
+                <div class="finish-main">
+                    <div class="inner">
+                        <div class="image-area">
+                            <img src="./img/finish_img.png" alt="북극곰 이미지">
+                        </div>
+                    </div>
+                </div>
+                <div class="finish-bottom">
+                    <div class="inner">
+                        <h2 class="title">2017년 대표이글루와 내이글루결산 어떠셨나요?<br>내년에도 더 재밌는 내용으로 다시 찾아올게요!</h2>
+                        <div class="icon-area">
+                            <a href="javascript:void(0)" class="icon icon-twitter-type2"><span class="blind">트위터</span></a>
+                            <a href="javascript:void(0)" class="icon icon-facebook-type2"><span class="blind">페이스북</span></a>
+                            <button type="button" class="icon icon-write-type2"><span class="blind">글작성</span></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="quick-menu">
+                <ul class="menu">
+                    <li>
+                        <button type="button" class="button-post-write has-icon-write">
+                            <span class="blind">글작성하기</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="button-scroll-top has-icon-arrow-top">
+                            <span class="text">TOP</span>
+                        </button>
+                    </li>
+                </ul>                
+            </div>
+        </main>
+        <footer>
+            <div class="inner">
+                <p class="text">Copyright ⓒ ZUM internet. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+	<script type="text/javascript" src="./dist/js/egloos.min.js"></script>
+    <script>
+        // chart 
+        ui.egloos.chart.data = {
+            type1: {
+                type: 'bar',
+                plugins: [ChartDataLabels],
+                data: {
+                    labels: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+                    datasets: [{
+                        label: '2016년',
+                        data: [80, 80, 280, 370, 30, 300, 410, 330, 680, 420, 290, 370],
+                        order: 1,
+                        backgroundColor: ['#d5eaed'],
+                        borderRadius: 50,
+                        borderSkipped: false,
+                        maxBarThickness: 14,
+                        datalabels: {
+                            font: {
+                                size: 14,
+                                weight: 'bold'
+                            },
+                            color: '#93bdc3',
+                            anchor: 'end',
+                            align: 'top'
+                        }
+                    },{
+                        label: '2017년',
+                        data: [80, 110, 280, 200, 280, 230, 590, 520, 580, 315, 410, 520],
+                        order: 2,
+                        backgroundColor: ['#1ad8f5'],
+                        borderRadius: 50,
+                        borderSkipped: false,
+                        maxBarThickness: 14,
+                        datalabels: {
+                            font: {
+                                size: 14,
+                                weight: 'bold'
+                            },
+                            color: '#1ad8f5',
+                            anchor: 'end',
+                            align: 'top'
+                        }
+                    }]                   
+                },
+                options: {
+                    plugins:{
+                        legend: {
+                            position:'bottom',
+                            align:'end',
+                            labels:{
+                                usePointStyle: true,
+                                pointStyle: 'circle',
+                                boxWidth: 7
+                            }
+                        },
+                        tooltip: false
+                    },
+                    scales: {
+                        x: {
+                            grid: {
+                                display: false
+                            },
+                            ticks: {
+                                color: ['#738183', '#738183', '#738183', '#738183', '#738183', '#738183', '#1ad8f5', '#738183', '#738183', '#738183','#738183', '#738183'],
+                                font: {
+                                    family: "'맑은 고딕', 'Malgun Gothic', 'Apple SD Gothic Neo', 'AppleGothic', sans-serif",
+                                    size: 14,
+                                    weight: ['normal', 'normal', 'normal', 'normal', 'normal', 'normal', 'bold', 'normal', 'normal', 'normal','normal', 'normal']
+                                }
+                            }
+                        },
+                        y: {
+                            suggestedMax: 1000,
+                            ticks: {
+                                color: '#99a3a4',
+                                font: {
+                                    family: "'맑은 고딕', 'Malgun Gothic', 'Apple SD Gothic Neo', 'AppleGothic', sans-serif",
+                                    size: 12,
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            type2: {
+                type: 'bar',
+                plugins: [ChartDataLabels],
+                data: {
+                    labels: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+                    datasets: [{
+                        label: '2016년',
+                        data: [80, 110, 280, 200, 280, 230, 690, 520, 590, 315, 410, 520],
+                        backgroundColor: ['#d5eaed', '#d5eaed', '#d5eaed', '#d5eaed', '#d5eaed', '#d5eaed', '#6481ff', '#d5eaed', '#d5eaed', '#d5eaed','#d5eaed', '#d5eaed'],
+                        borderRadius: 50,
+                        borderSkipped: false,
+                        maxBarThickness: 40,
+                        datalabels: {
+                            font: {
+                                size: 14,
+                                weight: 'bold'
+                            },
+                            color: ['#93bdc3', '#93bdc3', '#93bdc3', '#93bdc3', '#93bdc3', '#93bdc3', '#6481ff', '#93bdc3', '#93bdc3', '#93bdc3','#93bdc3', '#93bdc3'],
+                            anchor: 'end',
+                            align: 'top'
+                        }
+                    }]
+                },
+                options: {
+                    plugins:{
+                        legend: {
+                            display: false,
+                        },
+                        tooltip: false
+                    },
+                    scales: {
+                        x: {
+                            grid: {
+                                display: false
+                            },
+                            ticks: {
+                                color: ['#738183', '#738183', '#738183', '#738183', '#738183', '#738183', '#6481ff', '#738183', '#738183', '#738183','#738183', '#738183'],
+                                font: {
+                                    family: "'맑은 고딕', 'Malgun Gothic', 'Apple SD Gothic Neo', 'AppleGothic', sans-serif",
+                                    size: 14,
+                                    weight: ['normal', 'normal', 'normal', 'normal', 'normal', 'normal', 'bold', 'normal', 'normal', 'normal','normal', 'normal']
+                                }
+                            }
+                        },
+                        y: {
+                            suggestedMax: 800,
+                            display: false
+                        }
+                    }
+                }
+            },
+            type3: {
+                type: 'bar',
+                plugins: [ChartDataLabels],
+                data: {
+                    labels: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+                    datasets: [{
+                        label: '태그',
+                        data: [80, 80, 280, 370, 30, 300, 410, 330, 680, 420, 290, 370],
+                        order: 1,
+                        backgroundColor: ['#1ad8f5'],
+                        borderRadius: 50,
+                        borderSkipped: false,
+                        maxBarThickness: 14,
+                        datalabels: {
+                            font: {
+                                size: 14,
+                                weight: 'bold'
+                            },
+                            color: '#1ad8f5',
+                            anchor: 'end',
+                            align: 'top'
+                        }
+                    },{
+                        label: '밸리',
+                        data: [80, 110, 280, 200, 280, 230, 590, 520, 580, 315, 410, 520],
+                        order: 2,
+                        backgroundColor: ['#6481ff'],
+                        borderRadius: 50,
+                        borderSkipped: false,
+                        maxBarThickness: 14,
+                        datalabels: {
+                            font: {
+                                size: 14,
+                                weight: 'bold'
+                            },
+                            color: '#6481ff',
+                            anchor: 'end',
+                            align: 'top'
+                        }
+                    }]                   
+                },
+                options: {
+                    plugins:{
+                        legend: {
+                            position:'bottom',
+                            align:'end',
+                            labels:{
+                                usePointStyle: true,
+                                pointStyle: 'circle',
+                                boxWidth: 7
+                            }
+                        },
+                        tooltip: false
+                    },
+                    scales: {
+                        x: {
+                            grid: {
+                                display: false
+                            },
+                            ticks: {
+                                color: ['#738183', '#738183', '#738183', '#738183', '#738183', '#738183', '#6481ff', '#738183', '#1ad8f5', '#738183','#738183', '#738183'],
+                                font: {
+                                    family: "'맑은 고딕', 'Malgun Gothic', 'Apple SD Gothic Neo', 'AppleGothic', sans-serif",
+                                    size: 14,
+                                    weight: ['normal', 'normal', 'normal', 'normal', 'normal', 'normal', 'bold', 'normal', 'bold', 'normal','normal', 'normal']
+                                }
+                            }
+                        },
+                        y: {
+                            suggestedMax: 800,
+                            ticks: {
+                                color: '#99a3a4',
+                                font: {
+                                    family: "'맑은 고딕', 'Malgun Gothic', 'Apple SD Gothic Neo', 'AppleGothic', sans-serif",
+                                    size: 12,
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        ui.egloos.chart.initialize();
+    </script>
+</body>
+</html>

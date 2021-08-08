@@ -1,0 +1,101 @@
+/*
+ *  File Name : /src/entry/scss/abstracts/_mixin.scss
+ *  Description : mixin
+ */
+
+@mixin fontStyle(
+    $style: normal,
+    $weight: normal,
+    $size: 12px,
+    $family: $G-font-family
+){
+    font: {
+        style: $style;
+        weight: $weight;
+        size: $size;
+        family: $family;
+    }
+}
+
+@mixin textStyle(
+    $color: $G-color-black,
+    $line-height: 1,
+    $letter-spacing: -1px
+){
+    color: $color;
+    line-height: $line-height;
+    letter-spacing: $letter-spacing;
+}
+
+@mixin ellipsis($line: 1) {
+    @if ($line == 1) {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    } 
+    @else {
+        display: -webkit-box;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: $line;
+    }
+}
+
+@mixin iconBefore(
+    $width, 
+    $height, 
+    $url: $G-url-sprite-icon, 
+    $url-position-x: 0, 
+    $url-position-y: 0, 
+    $vertical-align: middle
+) {
+    &::before {
+        content: '';
+        display: inline-block;
+        width: $width;
+        height: $height;
+        background: {
+            image: url($url);
+            repeat: no-repeat;
+            position: $url-position-x $url-position-y;
+        }
+        vertical-align: $vertical-align;
+    }
+}
+
+@mixin iconAfter(
+    $width, 
+    $height, 
+    $url: $G-url-sprite-icon, 
+    $url-position-x: 0, 
+    $url-position-y: 0, 
+    $parent-width: 0,
+    $parent-height: 0,
+    $position: relative, 
+    $position-x: 0, 
+    $position-y: 0, 
+    $vertical-align: middle
+) {
+    &::after {
+        content: '';
+        display: inline-block;
+        position: $position;
+        left: $position-x;
+        top: $position-y;
+        width: $width;
+        height: $height;
+        background: {
+            image: url($url);
+            repeat: no-repeat;
+            position: $url-position-x $url-position-y;
+        }
+        vertical-align: $vertical-align;
+
+        @if ($position == absolute && $parent-height) {
+            left: 50%; 
+            top: ($parent-height - $height) / 2;
+            margin-left: - ( $width / 2 );
+        }
+    }
+}

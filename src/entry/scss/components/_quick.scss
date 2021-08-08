@@ -1,0 +1,64 @@
+/*
+ *  File Name : /src/entry/scss/components/_quick.scss
+ *  Description : quick
+ */
+
+.quick-menu {
+    position: fixed;
+    left: 50%;
+    bottom: 60px;
+    z-index: 100;
+    width: 122px;
+    margin-left: 490px;
+
+    .menu {
+        overflow: hidden;
+
+        li {
+            float: left;
+            position: relative;
+            width: 56px;
+            height: 60px;
+            margin-right: 10px;
+            background-color: $G-color-point-skyblue;
+
+            &:last-child {
+                margin-right: 0;
+            }
+            &::before {
+                content: '';
+                display: inline-block;
+                width: 4px;
+                height: 100%;
+                background-color: #17c2dc;
+            }
+        }
+        button {
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+
+            .text {
+                @include fontStyle($size: 18px);
+                @include textStyle($color: $G-color-white);   
+
+                position: absolute;
+                left: 0;
+                bottom: 15px;
+                width: 100%;
+            }
+        }
+    }
+    &:not(.show) {
+        display: none;
+    }
+    &.show {
+        -moz-animation: fadein 1s;
+        -webkit-animation: fadein 1s; 
+        -o-animation: fadein 1s;
+        animation: fadein 1s;
+    }
+}
